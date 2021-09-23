@@ -23,7 +23,7 @@ export const H2Middle = styled(H2)`
 
   &::after {
     content: "";
-    background-color: #a2d3c2;
+    background-color: #ffb703;
     display: block;
     position: absolute;
     height: 2px;

@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialised;
-    background-color: #5D5F71;
+    background-color: #03045e;
     font-family: 'Syne', sans-serif;
   }
 `;
@@ -20,7 +20,7 @@ export const Marginals = css`
   display: flex;
   pointer-events: none;
   position: fixed;
-  z-position: 1;
+  z-index: 1;
   width: 100vw;
 `;
 
