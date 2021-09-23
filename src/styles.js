@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialised;
     background-color: #5D5F71;
+    font-family: 'Syne', sans-serif;
   }
 
 `;
