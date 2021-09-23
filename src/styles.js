@@ -23,3 +23,19 @@ export const Marginals = css`
   z-position: 1;
   width: 100vw;
 `;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 600px;
+  width: 400px;
+`;
+
+export const Wrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+`;
