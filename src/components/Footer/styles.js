@@ -9,8 +9,8 @@ export const Footer = styled.footer`
 `;
 
 export const H2 = styled.h2`
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 800;
   line-height: 0.8;
   margin: 0;
   padding: 15px;
