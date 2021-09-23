@@ -9,11 +9,24 @@ export const Footer = styled.footer`
 `;
 
 export const H2 = styled.h2`
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 800;
   line-height: 0.8;
   margin: 0;
   padding: 15px;
+
+  @media (max-width: 1070px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 666px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 12px;
+    padding: 0;
+  }
 `;
 
 export const H2Middle = styled(H2)`
