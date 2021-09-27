@@ -11,7 +11,7 @@ export const Logo = styled(LogoSVG)`
 export const Header = styled.header`
   ${Marginals}
   justify-content: left;
-  padding: 30px;
+  padding: 30px 30px 30px 280px;
 
   @media (max-width: 700px) {
     padding: 15px;

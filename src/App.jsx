@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImgBox from "./components/ImgBox";
+import ColorPicker from "./components/ColorPicker";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 
 //prettier-ignore
@@ -15,6 +16,7 @@ const matrix = [
 ];
 
 const App = () => {
+  const [wrapperColor, setWrapperColor] = useState("#03045e");
   const [distance, setDistance] = useState(1);
   const easing = (num) => Math.pow(num, 3);
 
@@ -40,10 +42,15 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Footer />
+      <ColorPicker
+        wrapperColor={wrapperColor}
+        setWrapperColor={setWrapperColor}
+      />
       <Wrapper
         onMouseMove={handleMove}
         onTouchMove={handleTouchMove}
-        $color={Math.round(240 - distance * 15)}
+        //$color={Math.round(240 - distance * 15)}
+        $color={wrapperColor}
       >
         <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], index) => (
