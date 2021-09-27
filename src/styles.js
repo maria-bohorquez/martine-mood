@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialised;
-    background-color: #03045e;
     font-family: 'Syne', sans-serif;
   }
 `;
@@ -46,7 +45,8 @@ export const ImageContainer = styled.div.attrs(({ $isTogether }) => ({
 
 export const Wrapper = styled.section.attrs(({ $color }) => ({
   style: {
-    backgroundColor: `hsl(${$color}, 79%, 53%)`
+    //backgroundColor: `hsl(${$color}, 79%, 53%)`
+    backgroundColor: `${$color}`
   }
 }))`
   display: flex;
