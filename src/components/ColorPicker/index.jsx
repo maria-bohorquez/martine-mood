@@ -1,9 +1,17 @@
-import React from "react";
-import { Panel, ColorInput, InputContainer } from "./styles";
+import React, { useState } from "react";
+import { Panel, ColorInput, InputContainer, Arrow } from "./styles";
 
 const ColorPicker = ({ setWrapperColor, wrapperColor }) => {
+  const [showColorPicker, setShowColorPicker] = useState(false);
+
   return (
-    <Panel>
+    <Panel $isOpen={showColorPicker}>
+      <Arrow
+        onClick={() =>
+          setShowColorPicker((showColorPicker) => !showColorPicker)
+        }
+        $isOpen={showColorPicker}
+      />
       <InputContainer>
         <p>Background: </p>
         <ColorInput
