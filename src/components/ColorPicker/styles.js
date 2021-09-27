@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as ArrowSVG } from "./picker-arrow.svg";
 
 export const ColorInput = styled.input`
   margin-left: 8px;
@@ -27,7 +28,8 @@ export const Panel = styled.div`
 
   display: flex;
   position: fixed;
-  right: 0;
+  right: ${({ $isOpen }) => ($isOpen ? `0` : `-140px`)};
+  transition: 0.3s;
   top: 50px;
 
   @media (max-width: 700px) {
@@ -40,4 +42,12 @@ export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const Arrow = styled(ArrowSVG)`
+  display: block;
+  cursor: pointer;
+  padding: 16px 16px;
+
+  transform: ${({ $isOpen }) => ($isOpen ? `rotate(180deg)` : `unset`)};
 `;
