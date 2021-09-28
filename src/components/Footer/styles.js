@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { Marginals } from "../../styles";
 
-export const Footer = styled.footer`
+export const Footer = styled.footer.attrs(({ $color }) => ({
+  style: {
+    color: `${$color}`
+  }
+}))`
   ${Marginals}
   bottom: 0;
   justify-content: space-between;
