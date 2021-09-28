@@ -1,11 +1,19 @@
 import styled from "styled-components";
-import { ReactComponent as LogoSVG } from "./lookatmycat.svg";
+import { ReactComponent as LogoSVG } from "./logo.svg";
 import { Marginals } from "../../styles";
 
-export const Logo = styled(LogoSVG)`
+export const Logo = styled(LogoSVG).attrs(({ $color }) => ({
+  style: {
+    fill: `${$color}`
+  }
+}))`
   height: auto;
   max-width: 270px;
   width: 100%;
+
+  path {
+    fill: inherit;
+  }
 `;
 
 export const Header = styled.header`

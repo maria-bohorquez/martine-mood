@@ -17,7 +17,9 @@ const matrix = [
 
 const App = () => {
   const [wrapperColor, setWrapperColor] = useState("#03045e");
+  const [textColor, setTextColor] = useState("#E9FAE3");
   const [distance, setDistance] = useState(1);
+
   const easing = (num) => Math.pow(num, 3);
 
   const calculateDistance = ([x, y]) => {
@@ -40,11 +42,13 @@ const App = () => {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
-      <Footer />
+      <Header textColor={textColor} />
+      <Footer textColor={textColor} />
       <ColorPicker
         wrapperColor={wrapperColor}
         setWrapperColor={setWrapperColor}
+        textColor={textColor}
+        setTextColor={setTextColor}
       />
       <Wrapper
         onMouseMove={handleMove}
