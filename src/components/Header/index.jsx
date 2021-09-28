@@ -1,9 +1,9 @@
 import React from "react";
 import { Logo, Header } from "./styles";
 
-const HeaderComponent = () => (
+const HeaderComponent = ({ textColor }) => (
   <Header>
-    <Logo title="Look at my cat logo" />
+    <Logo title="Look at my cat logo" $color={textColor} />
   </Header>
 );
 
